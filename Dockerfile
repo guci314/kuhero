@@ -10,7 +10,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     wget -qO- https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip | busybox unzip - && \
     chmod +x /v2ray /v2ctl /usr/bin/gost /usr/bin/brook /usr/bin/v2ray-plugin_linux_amd64  && \
     mkdir -m 777 /gsnova  && \
-    wget -O /gsnova/gsnova.tar.bz2 http://github.com/yinqiwen/gsnova/releases/download/$VER/gsnova_linux_amd64-$VER.tar.bz2   && \ 
+    wget -O /gsnova/gsnova.tar.bz2 http://github.com/yinqiwen/gsnova/releases/download/0.33.0/gsnova_linux_amd64-$VER.tar.bz2   && \ 
     rm -rf /var/cache/apk/*
 
 ADD start.sh /start.sh
