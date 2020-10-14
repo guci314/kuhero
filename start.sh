@@ -12,7 +12,7 @@ wget -qO- $V2RAYCONFIG | sed -e "s/\$AUUID/$AUUID/g" -e "s/\$VMESSPATH/\\$VMESSP
 
 [[ "$V2RAYEnable"    ==    "true" ]]    &&    /v2ray -config /v2ray.json &
 
-[[ "$BROOKEnable"    ==    "true" ]]    &&    brook wsserver -l 127.0.0.1:3234 --path $BROOKPATH -p $APASSWORD &
+[[ "$BROOKEnable"    ==    "true" ]]    &&    brook server -l 127.0.0.1:3234 --path $BROOKPATH -p $APASSWORD &
 
 [[ "$GOSTEnable"     ==    "true" ]]    &&    eval gost $GOSTMETHOD &
 
