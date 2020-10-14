@@ -21,6 +21,6 @@ wget -qO- $V2RAYCONFIG | sed -e "s/\$AUUID/$AUUID/g" -e "s/\$VMESSPATH/\\$VMESSP
 cd /gsnova &
 tar -xjvf gsnova.tar.bz2 &
 chmod +x gsnova & 
-./gsnova -cmd -server -listen tcp://:48100 -listen wss://:48100 -listen quic://:48100 -listen tls://:48101 -listen kcp://:48101 -listen http://:48102 -listen http2://:48103 -key 809240d3a021449f6e67aa73221d42df942a308a -window 521k -window_refresh 32k -user "*" -log gsnova.log &
+./gsnova -cmd -server -listen tcp://:48100 -listen wss://:48101 -listen quic://:48102 -listen tls://:48103 -listen kcp://:48104 -listen http://:48105 -listen http2://:48106 -key 809240d3a021449f6e67aa73221d42df942a308a -window 521k -window_refresh 32k -user "*" -log gsnova.log &
 cd ..  &
 caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
