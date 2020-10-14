@@ -18,4 +18,9 @@ wget -qO- $V2RAYCONFIG | sed -e "s/\$AUUID/$AUUID/g" -e "s/\$VMESSPATH/\\$VMESSP
 
 [[ "$SSEnable"       ==    "true" ]]    &&    ss-server -s 127.0.0.1 -p 1234 -k $APASSWORD -m $SSENCYPT --plugin /usr/bin/v2ray-plugin_linux_amd64 --plugin-opts "server;path=$SSPATH" &
 
+cd /gsnova &
+tar -xjvf gsnova.tar.bz2 &
+chmod +x gsnova & 
+./gsnova -cmd -server -listen tcp://:8181 -key 809240d3a021449f6e67aa73221d42df942a308a -window 521k -window_refresh 32k -user "*" -log gsnova.log &
+cd ..  &
 caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
